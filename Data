@@ -1,0 +1,21 @@
+Port Listening
+
+sudo lsof -i -P -n | grep LISTEN
+
+Docker Cassandra
+
+Docker pull Cassandra:latest
+
+cqlsh> create keyspace test with replication = {'class' : 'SimpleStrategy', 'replication_factor' :1};
+
+Describe keyspaces
+
+create table users (id int Primary KEY, username text, password text)
+
+Insert into
+
+Docker Postgres
+
+Create Docker image
+
+docker run --name postgres -e POSTGRES_PASSWORD=password123 -d -p 5432:5432 postgres:alpine
